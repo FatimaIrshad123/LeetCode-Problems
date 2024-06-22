@@ -1,12 +1,28 @@
-function deleteDuplicates(head:any):any {
-    let unique= [];
-    for (let i = 0; i < head.length; i++) {
-        if (unique.indexOf(head[i]) === -1) {
-            unique.push(head[i]);
-        }
+class ListNode {
+         val: number
+         next: ListNode | null
+         constructor(val?: number, next?: ListNode | null) {
+             this.val = (val===undefined ? 0 : val)
+             this.next = (next===undefined ? null : next)
+         }
     }
-    return unique;
+
+function deleteDuplicates(head: ListNode | null): ListNode | null {
+    let node = head
+
+    while(node !== null){
+        if(node.next !== null){
+            if(node.val === node.next.val){
+                node.next = node.next.next
+                continue
+            }
+        }
+
+        node = node.next
+    }
+
+    return head
 };
 
-let r = deleteDuplicates([1,1,2])
-console.log(r)
+let val = deleteDuplicates(null)
+console.log(val);
