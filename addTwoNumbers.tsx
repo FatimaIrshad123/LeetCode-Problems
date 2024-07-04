@@ -1,8 +1,4 @@
 
- //Definition for singly-linked list.
-  
- 
-
 function addTwoNumbers(l1: any, l2: any): any {
     let sum = [];
     for (let i = 0; i< l1.length; i++){
