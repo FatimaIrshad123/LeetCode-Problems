@@ -10,7 +10,7 @@ function numberOfSpecialChars(word) {
                 ans++;
                 //console.log(ans);
             }
-            console.log(checked.add(word[i].toLowerCase()));
+            checked.add(word[i].toLowerCase());
         }
     }
 }
