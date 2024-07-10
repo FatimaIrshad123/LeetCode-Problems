@@ -1,9 +1,10 @@
 function reverse(x: number): any {
-   let str = x.toString();
-   let arr = str.split('');
-   let reverseArr = arr.reverse();
-   let newArr = reverseArr.join('');
-    let result = Number(newArr);
-    console.log(result)
+    //let a = Number(x.toString().split('').reverse().join(''));
+    //console.log(a);
+   if (x < 0){
+    return - Number(x.toString().split('').slice(1).reverse().join(''));
+   }else {
+    return Number(x.toString().split('').reverse().join(''))
+   }
 };
-reverse(-123)
+console.log(reverse(-123));
