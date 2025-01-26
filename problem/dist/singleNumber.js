@@ -5,7 +5,3 @@ function singleNumber(nums) {
 ;
 let ab = singleNumber([4, 1, 2, 1, 2]);
 console.log(ab);
-const arr = [10, 20, 25, 100, 40];
-console.log(arr.sort());
-arr.sort((a, b) => a - b);
-console.log(arr);
